@@ -4,22 +4,22 @@
 
 ### 1. 检查当前状态
 ```bash
-cd /Users/macbookpro/.openclaw/shared-tools/abns-skill
+cd /Users/macbookpro/.openclaw/shared-tools/all-in-news-skill
 git status
 ```
 
 ### 2. 创建GitHub仓库
 1. 访问 https://github.com/new
 2. 填写仓库信息：
-   - **Repository name**: `abns-skill`
-   - **Description**: `All-But-News Skill - 激进新闻抓取技能，永不放弃，保证100%成功率`
+   - **Repository name**: `all-in-news-skill`
+   - **Description**: `All-In-News Skill - 激进新闻抓取技能，永不放弃，保证100%成功率`
    - **Visibility**: Public
    - **Initialize with**: 不要勾选任何选项（我们已经有了本地仓库）
 
 ### 3. 添加远程仓库
 ```bash
 # 替换 YOUR_USERNAME 为你的GitHub用户名
-git remote add origin https://github.com/YOUR_USERNAME/abns-skill.git
+git remote add origin https://github.com/YOUR_USERNAME/all-in-news-skill.git
 ```
 
 ### 4. 推送代码
@@ -49,7 +49,7 @@ git push -u origin main
 ### 步骤1：创建GitHub仓库
 ```bash
 # 在GitHub网页创建仓库后，执行：
-git remote add origin https://github.com/sendybolongnese/abns-skill.git
+git remote add origin https://github.com/sendybolongnese/all-in-news-skill.git
 ```
 
 ### 步骤2：推送代码
@@ -66,15 +66,15 @@ git push origin v1.0.0
 ```
 
 ### 步骤4：创建Release
-1. 访问 https://github.com/sendybolongnese/abns-skill/releases/new
+1. 访问 https://github.com/sendybolongnese/all-in-news-skill/releases/new
 2. 选择标签：v1.0.0
-3. 标题：ABNS v1.0.0 - All-But-News Skill
+3. 标题：ABNS v1.0.0 - All-In-News Skill
 4. 描述：使用发布说明模板
 
 ## 📝 发布说明模板
 
 ```markdown
-# 🚀 ABNS v1.0.0 - All-But-News Skill
+# 🚀 ABNS v1.0.0 - All-In-News Skill
 
 ## 什么是ABNS？
 **永不放弃的激进新闻抓取技能**，从保守的"失败就排除"转变为激进的"失败就寻找"，保证100%成功率。
@@ -110,8 +110,8 @@ git push origin v1.0.0
 
 ### 安装
 ```bash
-git clone https://github.com/sendybolongnese/abns-skill.git
-cd abns-skill
+git clone https://github.com/sendybolongnese/all-in-news-skill.git
+cd all-in-news-skill
 ./scripts/setup.sh
 ```
 
@@ -130,7 +130,7 @@ python3 abns.py search --query "伊朗 封锁 霍尔木兹海峡"
 ## 📁 文件结构
 
 ```
-abns-skill/
+all-in-news-skill/
 ├── SKILL.md              # 技能说明文档
 ├── abns.py              # 主程序
 ├── strategies/          # 抓取策略
@@ -147,12 +147,12 @@ abns-skill/
 
 ### 作为Agent技能
 ```bash
-ln -s /path/to/abns-skill ~/.agents/skills/abns
+ln -s /path/to/all-in-news-skill ~/.agents/skills/abns
 ```
 
 ### 作为共享工具
 ```bash
-ln -s /path/to/abns-skill ~/.openclaw/shared-tools/abns-skill
+ln -s /path/to/all-in-news-skill ~/.openclaw/shared-tools/all-in-news-skill
 ```
 
 ## 🎯 适用场景
@@ -191,7 +191,7 @@ MIT License - 详见LICENSE文件
 ## 🔧 后续维护
 
 ### 问题反馈
-- GitHub Issues: https://github.com/sendybolongnese/abns-skill/issues
+- GitHub Issues: https://github.com/sendybolongnese/all-in-news-skill/issues
 - 邮件: sendybolongnese@icloud.com
 
 ### 贡献指南

@@ -16,8 +16,8 @@
 
 | 字段 | 值 |
 |------|-----|
-| **Repository name** | `abns-skill` |
-| **Description** | `All-But-News Skill - 激进新闻抓取技能，永不放弃，保证100%成功率` |
+| **Repository name** | `all-in-news-skill` |
+| **Description** | `All-In-News Skill - 激进新闻抓取技能，永不放弃，保证100%成功率` |
 | **Visibility** | ✅ **Public** |
 | **Initialize this repository with** | ❌ **不要勾选任何选项** |
 | | ❌ 不要勾选 "Add a README file" |
@@ -31,10 +31,10 @@
 
 ### 复制并执行以下命令：
 ```bash
-cd /Users/macbookpro/.openclaw/shared-tools/abns-skill
+cd /Users/macbookpro/.openclaw/shared-tools/all-in-news-skill
 
 # 添加远程仓库
-git remote add origin https://github.com/sendybolongnese/abns-skill.git
+git remote add origin https://github.com/sendybolongnese/all-in-news-skill.git
 
 # 推送代码
 git push -u origin main
@@ -47,7 +47,7 @@ git push -u origin main
 ## 📊 验证创建成功
 
 ### 检查GitHub仓库
-创建成功后访问：https://github.com/sendybolongnese/abns-skill
+创建成功后访问：https://github.com/sendybolongnese/all-in-news-skill
 
 应该看到：
 - ✅ 所有文件已上传
@@ -77,7 +77,7 @@ git push origin v1.0.0
 gh auth login
 
 # 创建仓库
-gh repo create abns-skill --public --description "All-But-News Skill - 激进新闻抓取技能" --disable-issues --disable-wiki
+gh repo create all-in-news-skill --public --description "All-In-News Skill - 激进新闻抓取技能" --disable-issues --disable-wiki
 
 # 推送代码
 git push -u origin main
@@ -86,7 +86,7 @@ git push -u origin main
 ## 🆘 常见问题解决
 
 ### 问题1：仓库已存在
-如果 `abns-skill` 已存在，可以：
+如果 `all-in-news-skill` 已存在，可以：
 1. 使用其他名称：`abns-news-crawler`
 2. 或者删除现有仓库后重新创建
 
@@ -121,14 +121,14 @@ git push -u origin main --force
 git remote -v
 
 # 应该显示：
-# origin  https://github.com/sendybolongnese/abns-skill.git (fetch)
-# origin  https://github.com/sendybolongnese/abns-skill.git (push)
+# origin  https://github.com/sendybolongnese/all-in-news-skill.git (fetch)
+# origin  https://github.com/sendybolongnese/all-in-news-skill.git (push)
 
 # 检查推送状态
 git log --oneline -5
 
 # 打开GitHub页面验证
-open https://github.com/sendybolongnese/abns-skill
+open https://github.com/sendybolongnese/all-in-news-skill
 ```
 
 ## 📈 发布后效果
@@ -177,6 +177,6 @@ open https://github.com/sendybolongnese/abns-skill
 
 **立即创建，让世界看到你的成果！** 🚀
 
-**仓库URL**：https://github.com/sendybolongnese/abns-skill  
+**仓库URL**：https://github.com/sendybolongnese/all-in-news-skill  
 **技能价值**：100%成功率的激进新闻抓取  
 **核心理念**：永不放弃，总能找到！

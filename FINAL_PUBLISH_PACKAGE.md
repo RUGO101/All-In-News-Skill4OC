@@ -9,8 +9,8 @@
 **立即执行**：
 1. 打开浏览器访问：https://github.com/new
 2. 填写信息：
-   - **Repository name**: `abns-skill`
-   - **Description**: `All-But-News Skill - 激进新闻抓取技能，永不放弃，保证100%成功率`
+   - **Repository name**: `all-in-news-skill`
+   - **Description**: `All-In-News Skill - 激进新闻抓取技能，永不放弃，保证100%成功率`
    - **Visibility**: ✅ **Public**
    - **Initialize with**: ❌ **不要勾选任何选项**
 3. 点击 `Create repository`
@@ -21,7 +21,7 @@
 
 ```bash
 # 进入目录
-cd /Users/macbookpro/.openclaw/shared-tools/abns-skill
+cd /Users/macbookpro/.openclaw/shared-tools/all-in-news-skill
 
 # 运行终极发布脚本
 ./scripts/ultimate_auto_publish.sh
@@ -51,25 +51,25 @@ cd /Users/macbookpro/.openclaw/shared-tools/abns-skill
 ## 🎯 步骤3：创建GitHub Release
 
 脚本完成后，**立即执行**：
-1. 访问：https://github.com/sendybolongnese/abns-skill/releases/new
+1. 访问：https://github.com/sendybolongnese/all-in-news-skill/releases/new
 2. 选择标签：`v1.0.0`
-3. 标题：`ABNS v1.0.0 - All-But-News Skill`
+3. 标题：`ABNS v1.0.0 - All-In-News Skill`
 4. 描述：复制 `RELEASE_v1.0.0.md` 文件的内容
 5. 点击 `Publish release`
 
 ## 📊 发布后验证
 
 **检查以下链接**：
-- ✅ 仓库：https://github.com/sendybolongnese/abns-skill
-- ✅ Release：https://github.com/sendybolongnese/abns-skill/releases
-- ✅ Actions：https://github.com/sendybolongnese/abns-skill/actions
-- ✅ Issues：https://github.com/sendybolongnese/abns-skill/issues
+- ✅ 仓库：https://github.com/sendybolongnese/all-in-news-skill
+- ✅ Release：https://github.com/sendybolongnese/all-in-news-skill/releases
+- ✅ Actions：https://github.com/sendybolongnese/all-in-news-skill/actions
+- ✅ Issues：https://github.com/sendybolongnese/all-in-news-skill/issues
 
 ## 🎉 发布完成！
 
 **ABNS技能将包含**：
 ```
-https://github.com/sendybolongnese/abns-skill
+https://github.com/sendybolongnese/all-in-news-skill
 ├── 🚀 完整技能代码
 ├── 📖 详细文档
 ├── 🔧 自动化工具
@@ -87,8 +87,8 @@ https://github.com/sendybolongnese/abns-skill
 
 ## 📞 支持信息
 
-- **仓库URL**: https://github.com/sendybolongnese/abns-skill
-- **问题反馈**: https://github.com/sendybolongnese/abns-skill/issues
+- **仓库URL**: https://github.com/sendybolongnese/all-in-news-skill
+- **问题反馈**: https://github.com/sendybolongnese/all-in-news-skill/issues
 - **联系邮箱**: sendybolongnese@icloud.com
 - **OpenClaw社区**: https://discord.com/invite/clawd
 
@@ -101,11 +101,11 @@ https://github.com/sendybolongnese/abns-skill
 # 访问 https://github.com/new
 
 # 2. 运行发布脚本
-cd /Users/macbookpro/.openclaw/shared-tools/abns-skill
+cd /Users/macbookpro/.openclaw/shared-tools/all-in-news-skill
 ./scripts/ultimate_auto_publish.sh
 
 # 3. 创建GitHub Release
-# 访问 https://github.com/sendybolongnese/abns-skill/releases/new
+# 访问 https://github.com/sendybolongnese/all-in-news-skill/releases/new
 ```
 
 **总耗时**: 约5分钟

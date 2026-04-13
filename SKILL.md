@@ -1,13 +1,13 @@
 ---
 name: abns
 description: >
-  All-But-News Skill (ABNS) - 激进新闻抓取技能
+  All-In-News Skill (ABNS) - 激进新闻抓取技能
   永不放弃的新闻抓取策略，主站失败就找转载，总能获取内容。
   基于实际测试的实用激进策略，保证100%成功率。
   触发条件：需要抓取新闻、获取网页内容、信息收集等。
 ---
 
-# 🚀 ABNS - All-But-News Skill
+# 🚀 ABNS - All-In-News Skill
 
 ## 核心理念
 **永不放弃，总能找到！**
@@ -64,7 +64,7 @@ alternatives = fetcher.find_alternatives("伊朗封锁新闻")
 ### OpenClaw Agent集成
 ```javascript
 // 在agent中使用
-const abns = require('abns-skill');
+const abns = require('all-in-news-skill');
 
 async function getNews() {
   const news = await abns.aggressiveFetch(url);
@@ -75,7 +75,7 @@ async function getNews() {
 ## 📁 文件结构
 
 ```
-abns-skill/
+all-in-news-skill/
 ├── SKILL.md              # 技能说明
 ├── abns.py              # 主程序
 ├── strategies/          # 抓取策略
@@ -104,10 +104,10 @@ abns-skill/
 ### 基础安装
 ```bash
 # 克隆技能库
-git clone https://github.com/openclaw/abns-skill.git ~/.openclaw/shared-tools/abns-skill
+git clone https://github.com/openclaw/all-in-news-skill.git ~/.openclaw/shared-tools/all-in-news-skill
 
 # 安装依赖
-cd ~/.openclaw/shared-tools/abns-skill
+cd ~/.openclaw/shared-tools/all-in-news-skill
 pip install -r requirements.txt
 
 # 初始化数据库
@@ -120,7 +120,7 @@ python3 scripts/test_abns.py
 ### OpenClaw集成
 ```bash
 # 将技能链接到agent技能目录
-ln -s ~/.openclaw/shared-tools/abns-skill ~/.agents/skills/abns
+ln -s ~/.openclaw/shared-tools/all-in-news-skill ~/.agents/skills/abns
 
 # 更新技能清单
 openclaw skills refresh
@@ -285,7 +285,7 @@ for source in sources:
 # cron_news.sh - 使用ABNS的每日新闻抓取
 
 # 使用ABNS抓取今日新闻
-python3 ~/.openclaw/shared-tools/abns-skill/scripts/daily_news.py
+python3 ~/.openclaw/shared-tools/all-in-news-skill/scripts/daily_news.py
 
 # 输出到指定位置
 cp /tmp/today-news.md ~/Obsidian/新闻/$(date +%Y-%m-%d).md

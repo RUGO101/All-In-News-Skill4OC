@@ -4,7 +4,7 @@
 
 set -e
 
-echo "🚀 开始安装ABNS (All-But-News Skill)"
+echo "🚀 开始安装ABNS (All-In-News Skill)"
 echo "======================================"
 
 # 检查Python版本
@@ -160,11 +160,11 @@ fi
 echo "创建共享工具链接..."
 SHARED_TOOLS_DIR="$HOME/.openclaw/shared-tools"
 if [ -d "$SHARED_TOOLS_DIR" ]; then
-    ln -sfn "$INSTALL_DIR" "$SHARED_TOOLS_DIR/abns-skill"
-    echo "✅ 创建共享工具链接: $SHARED_TOOLS_DIR/abns-skill"
+    ln -sfn "$INSTALL_DIR" "$SHARED_TOOLS_DIR/all-in-news-skill"
+    echo "✅ 创建共享工具链接: $SHARED_TOOLS_DIR/all-in-news-skill"
 else
     mkdir -p "$SHARED_TOOLS_DIR"
-    ln -sfn "$INSTALL_DIR" "$SHARED_TOOLS_DIR/abns-skill"
+    ln -sfn "$INSTALL_DIR" "$SHARED_TOOLS_DIR/all-in-news-skill"
     echo "✅ 创建共享工具目录和链接"
 fi
 
@@ -383,6 +383,6 @@ echo "  搜索新闻: python3 $INSTALL_DIR/abns.py search --query \"关键词\""
 echo ""
 echo "🔗 技能已链接到:"
 echo "  OpenClaw技能: ~/.agents/skills/abns"
-echo "  共享工具: ~/.openclaw/shared-tools/abns-skill"
+echo "  共享工具: ~/.openclaw/shared-tools/all-in-news-skill"
 echo ""
 echo "🚀 开始使用ABNS，永不放弃的新闻抓取！"

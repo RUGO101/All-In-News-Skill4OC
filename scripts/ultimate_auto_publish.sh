@@ -13,12 +13,12 @@ echo ""
 # 配置信息
 GITHUB_USERNAME="RUGO101"
 GITHUB_EMAIL="sendybolongnese@icloud.com"
-REPO_NAME="all-but-news-skill"
-REPO_DESC="All-But-News Skill - 激进新闻抓取技能，永不放弃，保证100%成功率"
+REPO_NAME="all-in-news-skill"
+REPO_DESC="All-In-News Skill - 激进新闻抓取技能，永不放弃，保证100%成功率"
 TAG_VERSION="v1.0.0"
 
 # 工作目录
-cd /Users/macbookpro/.openclaw/shared-tools/abns-skill
+cd /Users/macbookpro/.openclaw/shared-tools/all-in-news-skill
 echo "📁 工作目录: $(pwd)"
 
 # ================================================
@@ -142,7 +142,7 @@ RELEASE_DATE=$(date '+%Y-%m-%d')
 RELEASE_NOTES="RELEASE_${TAG_VERSION}.md"
 
 cat > "$RELEASE_NOTES" << EOF
-# 🚀 ABNS $TAG_VERSION - All-But-News Skill
+# 🚀 ABNS $TAG_VERSION - All-In-News Skill
 
 ## 永不放弃的激进新闻抓取技能
 
@@ -189,7 +189,7 @@ $REPO_NAME/
 ln -s /path/to/$REPO_NAME ~/.agents/skills/abns
 
 # 作为共享工具
-ln -s /path/to/$REPO_NAME ~/.openclaw/shared-tools/abns-skill
+ln -s /path/to/$REPO_NAME ~/.openclaw/shared-tools/all-in-news-skill
 \`\`\`
 
 ### 💪 ABNS精神
@@ -230,7 +230,7 @@ echo ""
 echo "请立即执行："
 echo "1. 访问: https://github.com/$GITHUB_USERNAME/$REPO_NAME/releases/new"
 echo "2. 选择标签: $TAG_VERSION"
-echo "3. 标题: ABNS $TAG_VERSION - All-But-News Skill"
+echo "3. 标题: ABNS $TAG_VERSION - All-In-News Skill"
 echo "4. 描述: 复制以下文件的内容："
 echo "   $(pwd)/$RELEASE_NOTES"
 echo "5. 点击 'Publish release'"

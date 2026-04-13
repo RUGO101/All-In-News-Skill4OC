@@ -32,7 +32,7 @@ echo "📋 当前配置："
 echo "仓库目录: $SCRIPT_DIR"
 echo "GitHub用户名: sendybolongnese"
 echo "GitHub邮箱: sendybolongnese@icloud.com"
-echo "仓库名称: abns-skill"
+echo "仓库名称: all-in-news-skill"
 
 # 设置git配置
 echo ""
@@ -51,11 +51,11 @@ else
     echo ""
     echo "请先在GitHub创建仓库："
     echo "1. 访问 https://github.com/new"
-    echo "2. 创建仓库: abns-skill"
+    echo "2. 创建仓库: all-in-news-skill"
     echo "3. 不要初始化README、.gitignore或LICENSE"
     echo ""
     echo "创建后执行："
-    echo "  git remote add origin https://github.com/sendybolongnese/abns-skill.git"
+    echo "  git remote add origin https://github.com/sendybolongnese/all-in-news-skill.git"
     echo "  git push -u origin main"
     exit 1
 fi
@@ -112,7 +112,7 @@ echo ""
 echo "生成发布说明..."
 RELEASE_NOTES="release_notes_${version}.md"
 cat > "$RELEASE_NOTES" << EOF
-# 🚀 ABNS $version - All-But-News Skill
+# 🚀 ABNS $version - All-In-News Skill
 
 ## 新版本发布！
 
@@ -125,8 +125,8 @@ cat > "$RELEASE_NOTES" << EOF
 ### 📦 安装方式
 \`\`\`bash
 # 从GitHub安装
-git clone https://github.com/sendybolongnese/abns-skill.git
-cd abns-skill
+git clone https://github.com/sendybolongnese/all-in-news-skill.git
+cd all-in-news-skill
 ./scripts/setup.sh
 \`\`\`
 
@@ -144,7 +144,7 @@ python3 abns.py search --query "关键词"
 
 ### 📁 文件结构
 \`\`\`
-abns-skill/
+all-in-news-skill/
 ├── SKILL.md              # 技能说明文档
 ├── abns.py              # 主程序
 ├── strategies/          # 抓取策略模块
@@ -157,10 +157,10 @@ abns-skill/
 ### 🔗 集成OpenClaw
 \`\`\`bash
 # 作为Agent技能
-ln -s /path/to/abns-skill ~/.agents/skills/abns
+ln -s /path/to/all-in-news-skill ~/.agents/skills/abns
 
 # 作为共享工具
-ln -s /path/to/abns-skill ~/.openclaw/shared-tools/abns-skill
+ln -s /path/to/all-in-news-skill ~/.openclaw/shared-tools/all-in-news-skill
 \`\`\`
 
 ### 📄 许可证
@@ -188,13 +188,13 @@ echo ""
 echo "🎉 本地发布准备完成！"
 echo ""
 echo "📋 下一步操作："
-echo "1. 访问 https://github.com/sendybolongnese/abns-skill/releases/new"
+echo "1. 访问 https://github.com/sendybolongnese/all-in-news-skill/releases/new"
 echo "2. 选择标签: $version"
-echo "3. 标题: ABNS $version - All-But-News Skill"
+echo "3. 标题: ABNS $version - All-In-News Skill"
 echo "4. 描述: 复制 $RELEASE_NOTES 的内容"
 echo "5. 点击 'Publish release'"
 echo ""
-echo "🔗 仓库地址: https://github.com/sendybolongnese/abns-skill"
+echo "🔗 仓库地址: https://github.com/sendybolongnese/all-in-news-skill"
 echo "📧 问题反馈: sendybolongnese@icloud.com"
 echo ""
 echo "祝发布顺利！ 🚀"

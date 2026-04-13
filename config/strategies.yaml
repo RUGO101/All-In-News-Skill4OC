@@ -31,4 +31,4 @@ backup:
 
 logging:
   level: INFO
-  file: "/Users/macbookpro/.openclaw/shared-tools/abns-skill/logs/abns.log"
+  file: "/Users/macbookpro/.openclaw/shared-tools/all-in-news-skill/logs/abns.log"

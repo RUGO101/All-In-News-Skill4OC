@@ -9,7 +9,7 @@ echo "🚀 ABNS技能快速发布到GitHub"
 echo "=============================="
 
 # 检查当前目录
-cd /Users/macbookpro/.openclaw/shared-tools/abns-skill
+cd /Users/macbookpro/.openclaw/shared-tools/all-in-news-skill
 
 # 步骤1：显示当前状态
 echo ""
@@ -30,8 +30,8 @@ else
     echo "📋 需要先创建GitHub仓库："
     echo "1. 访问 https://github.com/new"
     echo "2. 填写信息："
-    echo "   - Repository name: abns-skill"
-    echo "   - Description: All-But-News Skill - 激进新闻抓取技能"
+    echo "   - Repository name: all-in-news-skill"
+    echo "   - Description: All-In-News Skill - 激进新闻抓取技能"
     echo "   - Visibility: Public"
     echo "   - 不要初始化任何文件"
     echo "3. 点击 'Create repository'"
@@ -43,7 +43,7 @@ fi
 # 步骤3：设置远程仓库（如果需要）
 if ! git remote | grep -q origin; then
     echo "🔗 设置远程仓库..."
-    git remote add origin https://github.com/sendybolongnese/abns-skill.git
+    git remote add origin https://github.com/sendybolongnese/all-in-news-skill.git
     echo "✅ 远程仓库已添加"
 fi
 
@@ -67,7 +67,7 @@ git push -u origin main
 
 if [ $? -eq 0 ]; then
     echo "✅ 代码推送成功！"
-    echo "仓库地址: https://github.com/sendybolongnese/abns-skill"
+    echo "仓库地址: https://github.com/sendybolongnese/all-in-news-skill"
 else
     echo "❌ 推送失败"
     echo "可能原因："
@@ -89,7 +89,7 @@ echo "✅ 标签 $TAG 创建并推送成功"
 echo ""
 echo "📝 生成发布说明..."
 cat > RELEASE_NOTES.md << 'EOF'
-# 🚀 ABNS v1.0.0 - All-But-News Skill
+# 🚀 ABNS v1.0.0 - All-In-News Skill
 
 ## 永不放弃的激进新闻抓取技能
 
@@ -109,8 +109,8 @@ cat > RELEASE_NOTES.md << 'EOF'
 ### 🚀 快速开始
 ```bash
 # 安装
-git clone https://github.com/sendybolongnese/abns-skill.git
-cd abns-skill
+git clone https://github.com/sendybolongnese/all-in-news-skill.git
+cd all-in-news-skill
 ./scripts/setup.sh
 
 # 使用
@@ -120,7 +120,7 @@ python3 abns.py search --query "伊朗 封锁 霍尔木兹海峡"
 
 ### 📁 文件结构
 ```
-abns-skill/
+all-in-news-skill/
 ├── SKILL.md              # 技能说明文档
 ├── abns.py              # 主程序
 ├── strategies/          # 抓取策略模块
@@ -133,10 +133,10 @@ abns-skill/
 ### 🔗 集成OpenClaw
 ```bash
 # 作为Agent技能
-ln -s /path/to/abns-skill ~/.agents/skills/abns
+ln -s /path/to/all-in-news-skill ~/.agents/skills/abns
 
 # 作为共享工具
-ln -s /path/to/abns-skill ~/.openclaw/shared-tools/abns-skill
+ln -s /path/to/all-in-news-skill ~/.openclaw/shared-tools/all-in-news-skill
 ```
 
 ### 💪 ABNS精神
@@ -161,16 +161,16 @@ echo ""
 echo "🎉 发布完成！"
 echo ""
 echo "📋 下一步操作："
-echo "1. 访问 https://github.com/sendybolongnese/abns-skill/releases/new"
+echo "1. 访问 https://github.com/sendybolongnese/all-in-news-skill/releases/new"
 echo "2. 选择标签: v1.0.0"
-echo "3. 标题: ABNS v1.0.0 - All-But-News Skill"
+echo "3. 标题: ABNS v1.0.0 - All-In-News Skill"
 echo "4. 描述: 复制 RELEASE_NOTES.md 的内容"
 echo "5. 点击 'Publish release'"
 echo ""
 echo "🔗 重要链接："
-echo "仓库: https://github.com/sendybolongnese/abns-skill"
-echo "Issues: https://github.com/sendybolongnese/abns-skill/issues"
-echo "Actions: https://github.com/sendybolongnese/abns-skill/actions"
+echo "仓库: https://github.com/sendybolongnese/all-in-news-skill"
+echo "Issues: https://github.com/sendybolongnese/all-in-news-skill/issues"
+echo "Actions: https://github.com/sendybolongnese/all-in-news-skill/actions"
 echo ""
 echo "📧 支持: sendybolongnese@icloud.com"
 echo ""

@@ -1,15 +1,15 @@
-# 🚀 ABNS - All-But-News Skill
+# 🚀 ABNS - All-In-News Skill
 
 **永不放弃的激进新闻抓取技能**
 
-[![GitHub](https://img.shields.io/badge/GitHub-Repository-blue)](https://github.com/sendybolongnese/abns-skill)
+[![GitHub](https://img.shields.io/badge/GitHub-Repository-blue)](https://github.com/sendybolongnese/all-in-news-skill)
 [![License](https://img.shields.io/badge/License-MIT-green)](LICENSE)
 [![Python](https://img.shields.io/badge/Python-3.7+-blue)](https://www.python.org/)
 [![OpenClaw](https://img.shields.io/badge/OpenClaw-Skill-orange)](https://openclaw.ai)
 
 ## 📖 简介
 
-ABNS (All-But-News Skill) 是一个基于**激进策略**的新闻抓取技能，核心理念是**永不放弃，总能找到**。从保守的"失败就排除"转变为激进的"失败就寻找"，保证100%成功率。
+ABNS (All-In-News Skill) 是一个基于**激进策略**的新闻抓取技能，核心理念是**永不放弃，总能找到**。从保守的"失败就排除"转变为激进的"失败就寻找"，保证100%成功率。
 
 ## 🎯 核心特点
 
@@ -35,8 +35,8 @@ ABNS (All-But-News Skill) 是一个基于**激进策略**的新闻抓取技能�
 ### 从GitHub安装
 ```bash
 # 克隆仓库
-git clone https://github.com/sendybolongnese/abns-skill.git
-cd abns-skill
+git clone https://github.com/sendybolongnese/all-in-news-skill.git
+cd all-in-news-skill
 
 # 安装依赖和初始化
 ./scripts/setup.sh
@@ -48,7 +48,7 @@ cd abns-skill
 ### 从OpenClaw共享工具安装
 ```bash
 # 如果已在OpenClaw环境中
-cd ~/.openclaw/shared-tools/abns-skill
+cd ~/.openclaw/shared-tools/all-in-news-skill
 ./scripts/setup.sh
 ```
 
@@ -122,7 +122,7 @@ def smart_router(url):
 ## 📁 文件结构
 
 ```
-abns-skill/
+all-in-news-skill/
 ├── SKILL.md              # 技能说明文档
 ├── abns.py              # 主程序
 ├── strategies/          # 抓取策略
@@ -190,7 +190,7 @@ news = abns.fetch("https://www.xinhuanet.com")
 #!/bin/bash
 # daily_news.sh - 每日新闻抓取
 
-cd ~/.openclaw/shared-tools/abns-skill
+cd ~/.openclaw/shared-tools/all-in-news-skill
 
 # 使用ABNS抓取今日新闻
 python3 abns.py batch --input config/daily_urls.txt --output-dir output/daily/
@@ -344,7 +344,7 @@ class NewToolWrapper:
 ## 📞 支持与贡献
 
 ### 问题反馈
-- GitHub Issues: [https://github.com/sendybolongnese/abns-skill/issues](https://github.com/sendybolongnese/abns-skill/issues)
+- GitHub Issues: [https://github.com/sendybolongnese/all-in-news-skill/issues](https://github.com/sendybolongnese/all-in-news-skill/issues)
 - 邮件: sendybolongnese@icloud.com
 - Discord: OpenClaw社区
 
@@ -355,7 +355,7 @@ class NewToolWrapper:
 4. 创建Pull Request
 
 ### Star历史
-[![Star History Chart](https://api.star-history.com/svg?repos=sendybolongnese/abns-skill&type=Date)](https://star-history.com/#sendybolongnese/abns-skill&Date)
+[![Star History Chart](https://api.star-history.com/svg?repos=sendybolongnese/all-in-news-skill&type=Date)](https://star-history.com/#sendybolongnese/all-in-news-skill&Date)
 
 ### 路线图
 - [ ] 增加更多易抓取网站

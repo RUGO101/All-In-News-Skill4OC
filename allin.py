@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-ABNS (All-But-News Skill) - 激进新闻抓取主程序
+ABNS (All-In-News Skill) - 激进新闻抓取主程序
 永不放弃的新闻抓取策略
 """
 
