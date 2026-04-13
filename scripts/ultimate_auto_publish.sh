@@ -11,7 +11,7 @@ echo "================================================"
 echo ""
 
 # 配置信息
-GITHUB_USERNAME="sendybolongnese"
+GITHUB_USERNAME="RUGO101"
 GITHUB_EMAIL="sendybolongnese@icloud.com"
 REPO_NAME="abns-skill"
 REPO_DESC="All-But-News Skill - 激进新闻抓取技能，永不放弃，保证100%成功率"
