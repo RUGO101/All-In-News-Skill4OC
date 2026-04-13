@@ -1,11 +1,11 @@
 #!/bin/bash
 
-# ABNS技能发布到GitHub脚本
+# ALLIN技能发布到GitHub脚本
 # 使用方法: ./scripts/publish_to_github.sh
 
 set -e
 
-echo "🚀 ABNS技能发布到GitHub"
+echo "🚀 ALLIN技能发布到GitHub"
 echo "========================"
 
 # 检查当前目录
@@ -102,7 +102,7 @@ if [ -z "$version" ]; then
     version="v1.0.0"
 fi
 
-git tag -a "$version" -m "ABNS技能 $version 发布"
+git tag -a "$version" -m "ALLIN技能 $version 发布"
 git push origin "$version"
 
 echo "✅ 标签 $version 创建并推送成功"
@@ -166,7 +166,7 @@ ln -s /path/to/all-in-news-skill ~/.openclaw/shared-tools/all-in-news-skill
 ### 📄 许可证
 MIT License
 
-### 💪 ABNS精神
+### 💪 ALLIN精神
 > "没有抓不到的新闻，只有不够努力的抓取"
 > 
 > - 主站抓不到？找转载！
@@ -176,7 +176,7 @@ MIT License
 
 ---
 
-**ABNS技能 $version**  
+**ALLIN技能 $version**  
 **发布日期: $(date +%Y-%m-%d)**  
 **核心理念: 永不放弃，总能找到！**
 EOF

@@ -5,7 +5,7 @@
 
 set -e
 
-echo "🚀 ABNS技能快速发布到GitHub"
+echo "🚀 ALLIN技能快速发布到GitHub"
 echo "=============================="
 
 # 检查当前目录
@@ -81,7 +81,7 @@ fi
 echo ""
 echo "🏷️  创建版本标签..."
 TAG="v1.0.0"
-git tag -a "$TAG" -m "ABNS技能 $TAG 发布：激进新闻抓取策略"
+git tag -a "$TAG" -m "ALLIN技能 $TAG 发布：激进新闻抓取策略"
 git push origin "$TAG"
 echo "✅ 标签 $TAG 创建并推送成功"
 
@@ -104,7 +104,7 @@ cat > RELEASE_NOTES.md << 'EOF'
 |------|--------|------|------|
 | 保守策略 | 33% | 失败就排除 | 有限内容 |
 | 优化策略 | 66-100% | 优化工具 | 改进但有限 |
-| **ABNS激进策略** | **100%** | **永不放弃** | **总有高质量内容** |
+| **ALLIN全域策略** | **100%** | **永不放弃** | **总有高质量内容** |
 
 ### 🚀 快速开始
 ```bash
@@ -139,7 +139,7 @@ ln -s /path/to/all-in-news-skill ~/.agents/skills/abns
 ln -s /path/to/all-in-news-skill ~/.openclaw/shared-tools/all-in-news-skill
 ```
 
-### 💪 ABNS精神
+### 💪 ALLIN精神
 > "没有抓不到的新闻，只有不够努力的抓取"
 > 
 > - 主站抓不到？找转载！
@@ -149,7 +149,7 @@ ln -s /path/to/all-in-news-skill ~/.openclaw/shared-tools/all-in-news-skill
 
 ---
 
-**ABNS技能 v1.0.0**  
+**ALLIN技能 v1.0.0**  
 **发布日期: $(date +%Y-%m-%d)**  
 **核心理念: 永不放弃，总能找到！**
 EOF
@@ -174,4 +174,4 @@ echo "Actions: https://github.com/sendybolongnese/all-in-news-skill/actions"
 echo ""
 echo "📧 支持: sendybolongnese@icloud.com"
 echo ""
-echo "🌟 恭喜！ABNS技能已成功发布到GitHub！"
+echo "🌟 恭喜！ALLIN技能已成功发布到GitHub！"

@@ -4,7 +4,7 @@
 
 set -e
 
-echo "🧪 开始测试ABNS技能"
+echo "🧪 开始测试ALLIN技能"
 echo "===================="
 
 INSTALL_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"

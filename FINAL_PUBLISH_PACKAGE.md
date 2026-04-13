@@ -1,4 +1,4 @@
-# 🚀 ABNS技能最终发布包
+# 🚀 ALLIN技能最终发布包
 
 ## 📦 发布包内容
 
@@ -67,7 +67,7 @@ cd /Users/macbookpro/.openclaw/shared-tools/all-in-news-skill
 
 ## 🎉 发布完成！
 
-**ABNS技能将包含**：
+**ALLIN技能将包含**：
 ```
 https://github.com/sendybolongnese/all-in-news-skill
 ├── 🚀 完整技能代码
@@ -77,7 +77,7 @@ https://github.com/sendybolongnese/all-in-news-skill
 └── 📄 MIT许可证
 ```
 
-## 💪 ABNS精神
+## 💪 ALLIN精神
 
 > "没有抓不到的新闻，只有不够努力的抓取"
 > - 主站抓不到？找转载！
@@ -115,5 +115,5 @@ cd /Users/macbookpro/.openclaw/shared-tools/all-in-news-skill
 
 **现在就开始发布！** 🚀
 
-**ABNS技能 v1.0.0**  
+**ALLIN技能 v1.0.0**  
 **核心理念: 永不放弃，总能找到！**

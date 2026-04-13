@@ -132,7 +132,7 @@ nslookup github.com
 curl -I https://api.github.com
 ```
 
-## 💪 ABNS精神应用
+## 💪 ALLIN精神应用
 
 > "没有创建不了的仓库，只有不够努力的尝试"
 > - 网页创建失败？用API！

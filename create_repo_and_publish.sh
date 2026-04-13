@@ -1,10 +1,10 @@
 #!/bin/bash
 
-# 创建GitHub仓库并发布ABNS技能
+# 创建GitHub仓库并发布ALLIN技能
 
 set -e
 
-echo "🚀 创建GitHub仓库并发布ABNS技能"
+echo "🚀 创建GitHub仓库并发布ALLIN技能"
 echo "=================================="
 
 cd /Users/macbookpro/.openclaw/shared-tools/all-in-news-skill
@@ -68,7 +68,7 @@ fi
 echo ""
 echo "🏷️  创建版本标签..."
 TAG="v1.0.0"
-git tag -a "$TAG" -m "ABNS技能 $TAG 发布：激进新闻抓取策略"
+git tag -a "$TAG" -m "ALLIN技能 $TAG 发布：激进新闻抓取策略"
 git push origin "$TAG"
 echo "✅ 标签 $TAG 创建并推送成功"
 
@@ -92,7 +92,7 @@ cat > "RELEASE_${TAG}.md" << EOF
 |------|--------|------|------|
 | 保守策略 | 33% | 失败就排除 | 有限内容 |
 | 优化策略 | 66-100% | 优化工具 | 改进但有限 |
-| **ABNS激进策略** | **100%** | **永不放弃** | **总有高质量内容** |
+| **ALLIN全域策略** | **100%** | **永不放弃** | **总有高质量内容** |
 
 ### 🚀 快速开始
 \`\`\`bash
@@ -106,7 +106,7 @@ python3 abns.py fetch --url https://apnews.com/hub/middle-east
 python3 abns.py search --query "伊朗 封锁 霍尔木兹海峡"
 \`\`\`
 
-### 💪 ABNS精神
+### 💪 ALLIN精神
 > "没有抓不到的新闻，只有不够努力的抓取"
 > 
 > - 主站抓不到？找转载！
@@ -116,7 +116,7 @@ python3 abns.py search --query "伊朗 封锁 霍尔木兹海峡"
 
 ---
 
-**ABNS技能 $TAG**  
+**ALLIN技能 $TAG**  
 **发布日期: $RELEASE_DATE**  
 **核心理念: 永不放弃，总能找到！**
 EOF
@@ -140,4 +140,4 @@ echo "🔗 重要链接："
 echo "仓库: https://github.com/RUGO101/all-in-news-skill"
 echo "Release创建: https://github.com/RUGO101/all-in-news-skill/releases/new"
 echo ""
-echo "🌟 ABNS技能发布成功！"
+echo "🌟 ALLIN技能发布成功！"

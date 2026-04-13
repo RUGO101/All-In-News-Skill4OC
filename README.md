@@ -1,15 +1,15 @@
-# 🚀 ABNS - All-In-News Skill
+# 🚀 ALLIN - All-In-News Skill
 
-**永不放弃的激进新闻抓取技能**
+**永不放弃的全域新闻抓取技能**
 
-[![GitHub](https://img.shields.io/badge/GitHub-Repository-blue)](https://github.com/sendybolongnese/all-in-news-skill)
+[![GitHub](https://img.shields.io/badge/GitHub-Repository-blue)](https://github.com/RUGO101/all-in-news-skill)
 [![License](https://img.shields.io/badge/License-MIT-green)](LICENSE)
 [![Python](https://img.shields.io/badge/Python-3.7+-blue)](https://www.python.org/)
 [![OpenClaw](https://img.shields.io/badge/OpenClaw-Skill-orange)](https://openclaw.ai)
 
 ## 📖 简介
 
-ABNS (All-In-News Skill) 是一个基于**激进策略**的新闻抓取技能，核心理念是**永不放弃，总能找到**。从保守的"失败就排除"转变为激进的"失败就寻找"，保证100%成功率。
+ALLIN (All-In-News Skill) 是一个基于**全域策略**的新闻抓取技能，核心理念是**永不放弃，总能找到**。从保守的"失败就排除"转变为全域的"失败就寻找"，保证100%成功率。
 
 ## 🎯 核心特点
 
@@ -86,7 +86,7 @@ if result["success"]:
 |------|--------|----------|--------|------|
 | 保守策略 | 33% | 3-5条 | 低 | 失败就排除 |
 | 优化策略 | 66-100% | 3-5条 | 中 | 优化工具 |
-| **ABNS激进策略** | **100%** | **6-10条** | **高** | **永不放弃** |
+| **ALLIN全域策略** | **100%** | **6-10条** | **高** | **永不放弃** |
 
 ## 🏗️ 架构设计
 
@@ -332,7 +332,7 @@ class NewToolWrapper:
 - 舆情分析
 - 事件跟踪
 
-## 💪 ABNS精神
+## 💪 ALLIN精神
 
 > "没有抓不到的新闻，只有不够努力的抓取"
 > 
@@ -376,6 +376,6 @@ MIT License - 详见LICENSE文件
 
 ---
 
-**ABNS技能 v1.0**  
+**ALLIN技能 v1.0**  
 **创建日期: 2026-04-13**  
 **核心理念: 永不放弃，总能找到！**

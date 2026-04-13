@@ -6,7 +6,7 @@
 set -e
 
 echo "================================================"
-echo "🚀 ABNS技能终极自动化发布"
+echo "🚀 ALLIN技能终极自动化发布"
 echo "================================================"
 echo ""
 
@@ -14,7 +14,7 @@ echo ""
 GITHUB_USERNAME="RUGO101"
 GITHUB_EMAIL="sendybolongnese@icloud.com"
 REPO_NAME="all-in-news-skill"
-REPO_DESC="All-In-News Skill - 激进新闻抓取技能，永不放弃，保证100%成功率"
+REPO_DESC="All-In-News Skill - 全域新闻抓取技能，永不放弃，保证100%成功率"
 TAG_VERSION="v1.0.0"
 
 # 工作目录
@@ -129,7 +129,7 @@ fi
 echo ""
 echo "🏷️  步骤6：创建版本标签..."
 echo "创建标签: $TAG_VERSION"
-git tag -a "$TAG_VERSION" -m "ABNS技能 $TAG_VERSION 发布：激进新闻抓取策略"
+git tag -a "$TAG_VERSION" -m "ALLIN技能 $TAG_VERSION 发布：激进新闻抓取策略"
 git push origin "$TAG_VERSION"
 echo "✅ 标签 $TAG_VERSION 创建并推送成功"
 
@@ -157,7 +157,7 @@ cat > "$RELEASE_NOTES" << EOF
 |------|--------|------|------|
 | 保守策略 | 33% | 失败就排除 | 有限内容 |
 | 优化策略 | 66-100% | 优化工具 | 改进但有限 |
-| **ABNS激进策略** | **100%** | **永不放弃** | **总有高质量内容** |
+| **ALLIN全域策略** | **100%** | **永不放弃** | **总有高质量内容** |
 
 ### 🚀 快速开始
 \`\`\`bash
@@ -192,7 +192,7 @@ ln -s /path/to/$REPO_NAME ~/.agents/skills/abns
 ln -s /path/to/$REPO_NAME ~/.openclaw/shared-tools/all-in-news-skill
 \`\`\`
 
-### 💪 ABNS精神
+### 💪 ALLIN精神
 > "没有抓不到的新闻，只有不够努力的抓取"
 > 
 > - 主站抓不到？找转载！
@@ -202,7 +202,7 @@ ln -s /path/to/$REPO_NAME ~/.openclaw/shared-tools/all-in-news-skill
 
 ---
 
-**ABNS技能 $TAG_VERSION**  
+**ALLIN技能 $TAG_VERSION**  
 **发布日期: $RELEASE_DATE**  
 **核心理念: 永不放弃，总能找到！**
 EOF
@@ -248,9 +248,9 @@ echo "Issues: https://github.com/$GITHUB_USERNAME/$REPO_NAME/issues"
 echo ""
 echo "📧 支持: $GITHUB_EMAIL"
 echo ""
-echo "🌟 ABNS技能发布成功！"
+echo "🌟 ALLIN技能发布成功！"
 echo ""
-echo "💪 记住ABNS精神：永不放弃，总能找到！"
+echo "💪 记住ALLIN精神：永不放弃，总能找到！"
 echo "================================================"
 
 # ================================================

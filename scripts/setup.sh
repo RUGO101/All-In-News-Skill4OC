@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# ABNS技能安装脚本
+# ALLIN技能安装脚本
 
 set -e
 
@@ -186,7 +186,7 @@ cat > "$INSTALL_DIR/scripts/test_abns.sh" << 'EOF'
 
 set -e
 
-echo "🧪 开始测试ABNS技能"
+echo "🧪 开始测试ALLIN技能"
 echo "===================="
 
 INSTALL_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
@@ -279,7 +279,7 @@ EOF
 echo "测试URL已保存到: $TEST_OUTPUT_DIR/test_urls.txt"
 echo "✅ 测试环境准备完成"
 
-echo -e "\n🎉 ABNS技能安装测试完成！"
+echo -e "\n🎉 ALLIN技能安装测试完成！"
 echo "下一步:"
 echo "1. 运行完整测试: python3 abns.py fetch --url https://apnews.com/hub/middle-east"
 echo "2. 查看技能文档: cat SKILL.md | head -50"
@@ -369,7 +369,7 @@ EOF
 
 chmod +x "$INSTALL_DIR/scripts/cron_abns.sh"
 
-echo -e "\n🎉 ABNS技能安装完成！"
+echo -e "\n🎉 ALLIN技能安装完成！"
 echo "======================================"
 echo "安装目录: $INSTALL_DIR"
 echo "技能文档: $INSTALL_DIR/SKILL.md"

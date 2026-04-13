@@ -61,7 +61,7 @@ git push -u origin main
 ./scripts/publish_to_github.sh
 
 # 或者手动创建Release
-git tag -a v1.0.0 -m "ABNS技能v1.0发布：激进新闻抓取策略"
+git tag -a v1.0.0 -m "ALLIN技能v1.0发布：激进新闻抓取策略"
 git push origin v1.0.0
 ```
 
@@ -168,7 +168,7 @@ open https://github.com/sendybolongnese/all-in-news-skill
 3. 点击创建
 4. 执行推送命令
 
-**完成后**，ABNS技能将成为：
+**完成后**，ALLIN技能将成为：
 - 首个开源"永不放弃"新闻抓取技能
 - OpenClaw生态系统的重要组件
 - 开发者社区的共享资源
