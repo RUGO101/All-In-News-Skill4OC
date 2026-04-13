@@ -1,4 +1,4 @@
-# ABNS策略配置
+# 策略配置
 
 strategies:
   direct_fetch:
@@ -31,4 +31,4 @@ backup:
 
 logging:
   level: INFO
-  file: "/Users/macbookpro/.openclaw/shared-tools/all-in-news-skill/logs/abns.log"
+  file: "/Users/macbookpro/.openclaw/shared-tools/all-in-news-skill/logs/ains.log"

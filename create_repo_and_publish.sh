@@ -11,7 +11,7 @@ cd /Users/macbookpro/.openclaw/shared-tools/all-in-news-skill
 
 # 检查SSH认证
 echo "检查SSH认证..."
-ssh -i ~/.ssh/id_ed25519_abns -T git@github.com 2>&1 | grep -q "successfully authenticated" && echo "✅ SSH认证成功" || { echo "❌ SSH认证失败"; exit 1; }
+ssh -i ~/.ssh/id_ed25519_ains -T git@github.com 2>&1 | grep -q "successfully authenticated" && echo "✅ SSH认证成功" || { echo "❌ SSH认证失败"; exit 1; }
 
 # 显示当前配置
 echo ""
@@ -45,10 +45,10 @@ fi
 # 推送代码
 echo ""
 echo "📤 推送代码到GitHub..."
-echo "使用SSH密钥: ~/.ssh/id_ed25519_abns"
+echo "使用SSH密钥: ~/.ssh/id_ed25519_ains"
 
 # 设置SSH命令
-export GIT_SSH_COMMAND="ssh -i ~/.ssh/id_ed25519_abns -o IdentitiesOnly=yes"
+export GIT_SSH_COMMAND="ssh -i ~/.ssh/id_ed25519_ains -o IdentitiesOnly=yes"
 
 # 尝试推送
 if git push -u origin main; then
@@ -77,7 +77,7 @@ echo ""
 echo "📝 生成发布说明..."
 RELEASE_DATE=$(date '+%Y-%m-%d')
 cat > "RELEASE_${TAG}.md" << EOF
-# 🚀 ABNS $TAG - All-In-News Skill
+# 🚀  $TAG - All-In-News Skill
 
 ## 永不放弃的激进新闻抓取技能
 
@@ -102,8 +102,8 @@ cd all-in-news-skill
 ./scripts/setup.sh
 
 # 使用
-python3 abns.py fetch --url https://apnews.com/hub/middle-east
-python3 abns.py search --query "伊朗 封锁 霍尔木兹海峡"
+python3 ains.py fetch --url https://apnews.com/hub/middle-east
+python3 ains.py search --query "伊朗 封锁 霍尔木兹海峡"
 \`\`\`
 
 ### 💪 ALLIN精神
@@ -132,7 +132,7 @@ echo ""
 echo "请立即执行："
 echo "1. 访问: https://github.com/RUGO101/all-in-news-skill/releases/new"
 echo "2. 选择标签: $TAG"
-echo "3. 标题: ABNS $TAG - All-In-News Skill"
+echo "3. 标题:  $TAG - All-In-News Skill"
 echo "4. 描述: 复制 RELEASE_${TAG}.md 的内容"
 echo "5. 点击 'Publish release'"
 echo ""

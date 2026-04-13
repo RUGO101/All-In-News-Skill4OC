@@ -1,15 +1,15 @@
-# 🚀 A-I-News Skill for OpenClaw
+# 🚀 AINS Skill for OpenClaw
 
 **永不放弃的智能新闻抓取技能**
 
-[![GitHub](https://img.shields.io/badge/GitHub-Repository-blue)](https://github.com/RUGO101/all-in-news-skill)
+[![GitHub](https://img.shields.io/badge/GitHub-Repository-blue)](https://github.com/RUGO101/All-In-News-Skill4OC)
 [![License](https://img.shields.io/badge/License-MIT-green)](LICENSE)
 [![Python](https://img.shields.io/badge/Python-3.7+-blue)](https://www.python.org/)
 [![OpenClaw](https://img.shields.io/badge/OpenClaw-Skill-orange)](https://openclaw.ai)
 
 ## 📖 简介
 
-A-I-News Skill for OpenClaw 是一个基于**智能策略**的新闻抓取技能，核心理念是**永不放弃，总能找到**。从保守的"失败就排除"转变为智能的"失败就寻找"，保证100%成功率。
+AINS Skill for OpenClaw 是一个基于**智能策略**的新闻抓取技能，核心理念是**永不放弃，总能找到**。从保守的"失败就排除"转变为智能的"失败就寻找"，保证100%成功率。
 
 ## 🎯 核心特点
 
@@ -35,14 +35,14 @@ A-I-News Skill for OpenClaw 是一个基于**智能策略**的新闻抓取技能
 ### 从GitHub安装
 ```bash
 # 克隆仓库
-git clone https://github.com/sendybolongnese/all-in-news-skill.git
+git clone https://github.com/RUGO101/All-In-News-Skill4OC.git
 cd all-in-news-skill
 
 # 安装依赖和初始化
 ./scripts/setup.sh
 
 # 测试安装
-./scripts/test_abns.sh
+./scripts/test_ains.sh
 ```
 
 ### 从OpenClaw共享工具安装
@@ -55,24 +55,24 @@ cd ~/.openclaw/shared-tools/all-in-news-skill
 ### 基本使用
 ```bash
 # 单个URL抓取
-python3 abns.py fetch --url https://apnews.com/hub/middle-east
+python3 ains.py fetch --url https://apnews.com/hub/middle-east
 
 # 批量抓取
-python3 abns.py batch --input urls.txt --output-dir ./news/
+python3 ains.py batch --input urls.txt --output-dir ./news/
 
 # 搜索新闻
-python3 abns.py search --query "伊朗 封锁 霍尔木兹海峡" --limit 10
+python3 ains.py search --query "伊朗 封锁 霍尔木兹海峡" --limit 10
 ```
 
 ### Python API
 ```python
-from abns import ABNS
+from ains import 
 
 # 初始化
-abns = ABNS()
+ains = ()
 
 # 激进抓取
-result = abns.aggressive_fetch("https://apnews.com/hub/middle-east")
+result = ains.aggressive_fetch("https://apnews.com/hub/middle-east")
 
 if result["success"]:
     print(f"成功获取 {len(result['content'])} 字符内容")
@@ -124,7 +124,7 @@ def smart_router(url):
 ```
 all-in-news-skill/
 ├── SKILL.md              # 技能说明文档
-├── abns.py              # 主程序
+├── ains.py              # 主程序
 ├── strategies/          # 抓取策略
 │   ├── direct_fetch.py  # 直接抓取
 │   ├── keyword_search.py # 关键词提取
@@ -136,8 +136,8 @@ all-in-news-skill/
 │   └── backup_news.json # 备用新闻
 ├── scripts/             # 实用脚本
 │   ├── setup.sh        # 安装脚本
-│   ├── test_abns.sh    # 测试脚本
-│   └── cron_abns.sh    # cron job脚本
+│   ├── test_ains.sh    # 测试脚本
+│   └── cron_ains.sh    # cron job脚本
 └── output/              # 输出目录
 ```
 
@@ -149,8 +149,8 @@ all-in-news-skill/
 from web_content_fetcher import fetch_content
 
 def enhanced_fetch(url):
-    # 先用ABNS获取内容
-    content = abns_fetch(url)
+    # 先用获取内容
+    content = ains_fetch(url)
     
     # 如果需要深度提取
     if needs_deep_extraction(content):
@@ -168,7 +168,7 @@ def enhanced_fetch(url):
 # 新方式（激进）
 news = []
 for source in ALL_SOURCES:  # 包括之前失败的
-    content = abns.aggressive_fetch(source.url)
+    content = ains.aggressive_fetch(source.url)
     if content:  # 总是True，因为有备用
         news.append(content)
 ```
@@ -180,8 +180,8 @@ for source in ALL_SOURCES:  # 包括之前失败的
 # 之前：新华网直接失败
 # fetch("https://www.xinhuanet.com") -> ❌ FAILED
 
-# 现在：ABNS激进抓取
-news = abns.fetch("https://www.xinhuanet.com")
+# 现在：激进抓取
+news = ains.fetch("https://www.xinhuanet.com")
 # -> ✅ 成功（通过转载或备用）
 ```
 
@@ -192,11 +192,11 @@ news = abns.fetch("https://www.xinhuanet.com")
 
 cd ~/.openclaw/shared-tools/all-in-news-skill
 
-# 使用ABNS抓取今日新闻
-python3 abns.py batch --input config/daily_urls.txt --output-dir output/daily/
+# 使用抓取今日新闻
+python3 ains.py batch --input config/daily_urls.txt --output-dir output/daily/
 
 # 生成报告
-echo "ABNS抓取完成: $(date)" >> logs/daily.log
+echo "抓取完成: $(date)" >> logs/daily.log
 ```
 
 ### 案例3：多源新闻聚合
@@ -207,7 +207,7 @@ sources = ["AP News", "Reuters", "CNN", "新华网", "Al Jazeera", "BBC中文"]
 
 all_news = []
 for source in sources:
-    news = abns.fetch(source.url_for(event))
+    news = ains.fetch(source.url_for(event))
     all_news.append({
         "source": source.name,
         "content": news,
@@ -243,7 +243,7 @@ backup:
 
 ### 性能调优
 ```python
-abns = ABNS(
+ains = (
     timeout=8,           # 单个请求超时
     max_retries=3,       # 最大重试次数
     parallel_workers=4,  # 并发数
@@ -256,7 +256,7 @@ abns = ABNS(
 
 ### 获取统计信息
 ```python
-stats = abns.get_stats()
+stats = ains.get_stats()
 print(f"总尝试次数: {stats['total_attempts']}")
 print(f"成功率: {stats['success_rate']:.1f}%")
 print(f"平均用时: {stats['avg_time_per_fetch']:.2f}秒")
@@ -265,8 +265,8 @@ print(f"备用使用次数: {stats['backup_used']}")
 
 ### 保存结果
 ```python
-results = abns.batch_fetch(urls)
-json_file, md_file = abns.save_results(results, "./output")
+results = ains.batch_fetch(urls)
+json_file, md_file = ains.save_results(results, "./output")
 
 print(f"JSON结果: {json_file}")
 print(f"Markdown报告: {md_file}")
@@ -344,8 +344,8 @@ class NewToolWrapper:
 ## 📞 支持与贡献
 
 ### 问题反馈
-- GitHub Issues: [https://github.com/sendybolongnese/all-in-news-skill/issues](https://github.com/sendybolongnese/all-in-news-skill/issues)
-- 邮件: sendybolongnese@icloud.com
+- GitHub Issues: [https://github.com/RUGO101/All-In-News-Skill4OC/issues](https://github.com/RUGO101/All-In-News-Skill4OC/issues)
+- 邮件: 
 - Discord: OpenClaw社区
 
 ### 贡献指南

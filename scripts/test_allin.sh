@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# ABNS测试脚本
+# 测试脚本
 
 set -e
 
@@ -14,7 +14,7 @@ cd "$INSTALL_DIR"
 echo "测试1: 检查文件结构..."
 required_files=(
     "SKILL.md"
-    "abns.py"
+    "ains.py"
     "strategies/direct_fetch.py"
     "strategies/keyword_search.py"
     "strategies/alternative_finder.py"
@@ -74,9 +74,9 @@ else
     exit 1
 fi
 
-# 测试3: 运行ABNS命令行测试
+# 测试3: 运行命令行测试
 echo -e "\n测试3: 命令行接口测试..."
-if python3 abns.py --help 2>&1 | grep -q "ABNS"; then
+if python3 ains.py --help 2>&1 | grep -q ""; then
     echo "✅ 命令行接口正常"
 else
     echo "❌ 命令行接口异常"

@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# 🚀 ABNS终极自动化发布脚本
+# 🚀 终极自动化发布脚本
 # 包含所有步骤的完整自动化
 
 set -e
@@ -12,7 +12,7 @@ echo ""
 
 # 配置信息
 GITHUB_USERNAME="RUGO101"
-GITHUB_EMAIL="sendybolongnese@icloud.com"
+GITHUB_EMAIL=""
 REPO_NAME="all-in-news-skill"
 REPO_DESC="All-In-News Skill - 全域新闻抓取技能，永不放弃，保证100%成功率"
 TAG_VERSION="v1.0.0"
@@ -142,7 +142,7 @@ RELEASE_DATE=$(date '+%Y-%m-%d')
 RELEASE_NOTES="RELEASE_${TAG_VERSION}.md"
 
 cat > "$RELEASE_NOTES" << EOF
-# 🚀 ABNS $TAG_VERSION - All-In-News Skill
+# 🚀  $TAG_VERSION - All-In-News Skill
 
 ## 永不放弃的激进新闻抓取技能
 
@@ -167,15 +167,15 @@ cd $REPO_NAME
 ./scripts/setup.sh
 
 # 使用
-python3 abns.py fetch --url https://apnews.com/hub/middle-east
-python3 abns.py search --query "伊朗 封锁 霍尔木兹海峡"
+python3 ains.py fetch --url https://apnews.com/hub/middle-east
+python3 ains.py search --query "伊朗 封锁 霍尔木兹海峡"
 \`\`\`
 
 ### 📁 文件结构
 \`\`\`
 $REPO_NAME/
 ├── SKILL.md              # 技能说明文档
-├── abns.py              # 主程序
+├── ains.py              # 主程序
 ├── strategies/          # 抓取策略模块
 ├── config/              # 配置文件
 ├── databases/           # 数据库文件
@@ -186,7 +186,7 @@ $REPO_NAME/
 ### 🔗 集成OpenClaw
 \`\`\`bash
 # 作为Agent技能
-ln -s /path/to/$REPO_NAME ~/.agents/skills/abns
+ln -s /path/to/$REPO_NAME ~/.agents/skills/ains
 
 # 作为共享工具
 ln -s /path/to/$REPO_NAME ~/.openclaw/shared-tools/all-in-news-skill
@@ -230,7 +230,7 @@ echo ""
 echo "请立即执行："
 echo "1. 访问: https://github.com/$GITHUB_USERNAME/$REPO_NAME/releases/new"
 echo "2. 选择标签: $TAG_VERSION"
-echo "3. 标题: ABNS $TAG_VERSION - All-In-News Skill"
+echo "3. 标题:  $TAG_VERSION - All-In-News Skill"
 echo "4. 描述: 复制以下文件的内容："
 echo "   $(pwd)/$RELEASE_NOTES"
 echo "5. 点击 'Publish release'"

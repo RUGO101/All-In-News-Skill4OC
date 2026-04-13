@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# ABNS快速发布脚本
+# 快速发布脚本
 # 包含创建仓库和发布的所有步骤
 
 set -e
@@ -43,7 +43,7 @@ fi
 # 步骤3：设置远程仓库（如果需要）
 if ! git remote | grep -q origin; then
     echo "🔗 设置远程仓库..."
-    git remote add origin https://github.com/sendybolongnese/all-in-news-skill.git
+    git remote add origin https://github.com/RUGO101/All-In-News-Skill4OC.git
     echo "✅ 远程仓库已添加"
 fi
 
@@ -51,7 +51,7 @@ fi
 echo ""
 echo "📤 推送代码到GitHub..."
 echo "认证信息："
-echo "用户名: sendybolongnese@icloud.com"
+echo "用户名: "
 echo "密码: 使用个人访问令牌(PAT)"
 echo ""
 echo "如果需要创建个人访问令牌："
@@ -67,7 +67,7 @@ git push -u origin main
 
 if [ $? -eq 0 ]; then
     echo "✅ 代码推送成功！"
-    echo "仓库地址: https://github.com/sendybolongnese/all-in-news-skill"
+    echo "仓库地址: https://github.com/RUGO101/All-In-News-Skill4OC"
 else
     echo "❌ 推送失败"
     echo "可能原因："
@@ -89,7 +89,7 @@ echo "✅ 标签 $TAG 创建并推送成功"
 echo ""
 echo "📝 生成发布说明..."
 cat > RELEASE_NOTES.md << 'EOF'
-# 🚀 ABNS v1.0.0 - All-In-News Skill
+# 🚀  v1.0.0 - All-In-News Skill
 
 ## 永不放弃的激进新闻抓取技能
 
@@ -109,20 +109,20 @@ cat > RELEASE_NOTES.md << 'EOF'
 ### 🚀 快速开始
 ```bash
 # 安装
-git clone https://github.com/sendybolongnese/all-in-news-skill.git
+git clone https://github.com/RUGO101/All-In-News-Skill4OC.git
 cd all-in-news-skill
 ./scripts/setup.sh
 
 # 使用
-python3 abns.py fetch --url https://apnews.com/hub/middle-east
-python3 abns.py search --query "伊朗 封锁 霍尔木兹海峡"
+python3 ains.py fetch --url https://apnews.com/hub/middle-east
+python3 ains.py search --query "伊朗 封锁 霍尔木兹海峡"
 ```
 
 ### 📁 文件结构
 ```
 all-in-news-skill/
 ├── SKILL.md              # 技能说明文档
-├── abns.py              # 主程序
+├── ains.py              # 主程序
 ├── strategies/          # 抓取策略模块
 ├── config/              # 配置文件
 ├── databases/           # 数据库文件
@@ -133,7 +133,7 @@ all-in-news-skill/
 ### 🔗 集成OpenClaw
 ```bash
 # 作为Agent技能
-ln -s /path/to/all-in-news-skill ~/.agents/skills/abns
+ln -s /path/to/all-in-news-skill ~/.agents/skills/ains
 
 # 作为共享工具
 ln -s /path/to/all-in-news-skill ~/.openclaw/shared-tools/all-in-news-skill
@@ -161,17 +161,17 @@ echo ""
 echo "🎉 发布完成！"
 echo ""
 echo "📋 下一步操作："
-echo "1. 访问 https://github.com/sendybolongnese/all-in-news-skill/releases/new"
+echo "1. 访问 https://github.com/RUGO101/All-In-News-Skill4OC/releases/new"
 echo "2. 选择标签: v1.0.0"
-echo "3. 标题: ABNS v1.0.0 - All-In-News Skill"
+echo "3. 标题:  v1.0.0 - All-In-News Skill"
 echo "4. 描述: 复制 RELEASE_NOTES.md 的内容"
 echo "5. 点击 'Publish release'"
 echo ""
 echo "🔗 重要链接："
-echo "仓库: https://github.com/sendybolongnese/all-in-news-skill"
-echo "Issues: https://github.com/sendybolongnese/all-in-news-skill/issues"
-echo "Actions: https://github.com/sendybolongnese/all-in-news-skill/actions"
+echo "仓库: https://github.com/RUGO101/All-In-News-Skill4OC"
+echo "Issues: https://github.com/RUGO101/All-In-News-Skill4OC/issues"
+echo "Actions: https://github.com/RUGO101/All-In-News-Skill4OC/actions"
 echo ""
-echo "📧 支持: sendybolongnese@icloud.com"
+echo "📧 支持: "
 echo ""
 echo "🌟 恭喜！ALLIN技能已成功发布到GitHub！"

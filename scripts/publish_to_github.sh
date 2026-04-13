@@ -31,14 +31,14 @@ echo ""
 echo "📋 当前配置："
 echo "仓库目录: $SCRIPT_DIR"
 echo "GitHub用户名: sendybolongnese"
-echo "GitHub邮箱: sendybolongnese@icloud.com"
+echo "GitHub邮箱: "
 echo "仓库名称: all-in-news-skill"
 
 # 设置git配置
 echo ""
 echo "设置git配置..."
 git config user.name "sendybolongnese"
-git config user.email "sendybolongnese@icloud.com"
+git config user.email ""
 
 # 检查是否已设置远程仓库
 echo ""
@@ -55,7 +55,7 @@ else
     echo "3. 不要初始化README、.gitignore或LICENSE"
     echo ""
     echo "创建后执行："
-    echo "  git remote add origin https://github.com/sendybolongnese/all-in-news-skill.git"
+    echo "  git remote add origin https://github.com/RUGO101/All-In-News-Skill4OC.git"
     echo "  git push -u origin main"
     exit 1
 fi
@@ -71,7 +71,7 @@ fi
 
 # 推送代码
 echo "推送代码到GitHub..."
-echo "用户名: sendybolongnese@icloud.com"
+echo "用户名: "
 echo "密码: 使用个人访问令牌(PAT)"
 echo ""
 echo "如果提示认证失败，请："
@@ -112,7 +112,7 @@ echo ""
 echo "生成发布说明..."
 RELEASE_NOTES="release_notes_${version}.md"
 cat > "$RELEASE_NOTES" << EOF
-# 🚀 ABNS $version - All-In-News Skill
+# 🚀  $version - All-In-News Skill
 
 ## 新版本发布！
 
@@ -125,7 +125,7 @@ cat > "$RELEASE_NOTES" << EOF
 ### 📦 安装方式
 \`\`\`bash
 # 从GitHub安装
-git clone https://github.com/sendybolongnese/all-in-news-skill.git
+git clone https://github.com/RUGO101/All-In-News-Skill4OC.git
 cd all-in-news-skill
 ./scripts/setup.sh
 \`\`\`
@@ -133,20 +133,20 @@ cd all-in-news-skill
 ### 🚀 快速开始
 \`\`\`bash
 # 单个URL抓取
-python3 abns.py fetch --url https://apnews.com/hub/middle-east
+python3 ains.py fetch --url https://apnews.com/hub/middle-east
 
 # 批量抓取
-python3 abns.py batch --input urls.txt
+python3 ains.py batch --input urls.txt
 
 # 搜索新闻
-python3 abns.py search --query "关键词"
+python3 ains.py search --query "关键词"
 \`\`\`
 
 ### 📁 文件结构
 \`\`\`
 all-in-news-skill/
 ├── SKILL.md              # 技能说明文档
-├── abns.py              # 主程序
+├── ains.py              # 主程序
 ├── strategies/          # 抓取策略模块
 ├── config/              # 配置文件
 ├── databases/           # 数据库文件
@@ -157,7 +157,7 @@ all-in-news-skill/
 ### 🔗 集成OpenClaw
 \`\`\`bash
 # 作为Agent技能
-ln -s /path/to/all-in-news-skill ~/.agents/skills/abns
+ln -s /path/to/all-in-news-skill ~/.agents/skills/ains
 
 # 作为共享工具
 ln -s /path/to/all-in-news-skill ~/.openclaw/shared-tools/all-in-news-skill
@@ -188,13 +188,13 @@ echo ""
 echo "🎉 本地发布准备完成！"
 echo ""
 echo "📋 下一步操作："
-echo "1. 访问 https://github.com/sendybolongnese/all-in-news-skill/releases/new"
+echo "1. 访问 https://github.com/RUGO101/All-In-News-Skill4OC/releases/new"
 echo "2. 选择标签: $version"
-echo "3. 标题: ABNS $version - All-In-News Skill"
+echo "3. 标题:  $version - All-In-News Skill"
 echo "4. 描述: 复制 $RELEASE_NOTES 的内容"
 echo "5. 点击 'Publish release'"
 echo ""
-echo "🔗 仓库地址: https://github.com/sendybolongnese/all-in-news-skill"
-echo "📧 问题反馈: sendybolongnese@icloud.com"
+echo "🔗 仓库地址: https://github.com/RUGO101/All-In-News-Skill4OC"
+echo "📧 问题反馈: "
 echo ""
 echo "祝发布顺利！ 🚀"

@@ -1,4 +1,4 @@
-name: Test ABNS Skill
+name: Test  Skill
 
 on:
   push:
@@ -32,7 +32,7 @@ jobs:
       run: |
         echo "检查文件结构..."
         [ -f SKILL.md ] && echo "✅ SKILL.md存在" || echo "❌ SKILL.md缺失"
-        [ -f abns.py ] && echo "✅ abns.py存在" || echo "❌ abns.py缺失"
+        [ -f ains.py ] && echo "✅ ains.py存在" || echo "❌ ains.py缺失"
         [ -f README.md ] && echo "✅ README.md存在" || echo "❌ README.md缺失"
         [ -f requirements.txt ] && echo "✅ requirements.txt存在" || echo "❌ requirements.txt缺失"
         [ -f LICENSE ] && echo "✅ LICENSE存在" || echo "❌ LICENSE缺失"
@@ -44,7 +44,7 @@ jobs:
         
         echo "检查脚本..."
         [ -f scripts/setup.sh ] && echo "✅ setup.sh存在" || echo "❌ setup.sh缺失"
-        [ -f scripts/test_abns.sh ] && echo "✅ test_abns.sh存在" || echo "❌ test_abns.sh缺失"
+        [ -f scripts/test_ains.sh ] && echo "✅ test_ains.sh存在" || echo "❌ test_ains.sh缺失"
     
     - name: Test imports
       run: |
@@ -64,4 +64,4 @@ except Exception as e:
     - name: Test command line interface
       run: |
         echo "测试命令行接口..."
-        python abns.py --help 2>&1 | grep -q "ABNS" && echo "✅ 命令行接口正常" || echo "❌ 命令行接口异常"
+        python ains.py --help 2>&1 | grep -q "" && echo "✅ 命令行接口正常" || echo "❌ 命令行接口异常"

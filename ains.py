@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-ABNS (All-In-News Skill) - 激进新闻抓取主程序
+ (All-In-News Skill) - 激进新闻抓取主程序
 永不放弃的新闻抓取策略
 """
 
@@ -25,11 +25,11 @@ from tools.content_fetcher import ContentFetcher
 from databases.easy_sites import EasySitesDB
 from databases.backup_news import BackupNewsDB
 
-class ABNS:
-    """ABNS主类 - 激进新闻抓取引擎"""
+class :
+    """主类 - 激进新闻抓取引擎"""
     
     def __init__(self, config_path: str = None):
-        """初始化ABNS引擎"""
+        """初始化引擎"""
         self.config = self._load_config(config_path)
         self.logs = []
         
@@ -81,7 +81,7 @@ class ABNS:
             },
             "logging": {
                 "level": "INFO",
-                "file": "abns.log"
+                "file": "ains.log"
             }
         }
         
@@ -360,14 +360,14 @@ class ABNS:
         timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
         
         # 保存为JSON
-        json_file = os.path.join(output_dir, f"abns_results_{timestamp}.json")
+        json_file = os.path.join(output_dir, f"ains_results_{timestamp}.json")
         with open(json_file, 'w', encoding='utf-8') as f:
             json.dump(results, f, ensure_ascii=False, indent=2)
         
         # 保存为Markdown
-        md_file = os.path.join(output_dir, f"abns_results_{timestamp}.md")
+        md_file = os.path.join(output_dir, f"ains_results_{timestamp}.md")
         with open(md_file, 'w', encoding='utf-8') as f:
-            f.write(f"# ABNS抓取结果 - {timestamp}\n\n")
+            f.write(f"# 抓取结果 - {timestamp}\n\n")
             
             successful = [r for r in results if r["success"]]
             failed = [r for r in results if not r["success"]]
@@ -397,7 +397,7 @@ class ABNS:
 
 def main():
     """命令行入口"""
-    parser = argparse.ArgumentParser(description="ABNS - 激进新闻抓取技能")
+    parser = argparse.ArgumentParser(description=" - 激进新闻抓取技能")
     parser.add_argument("command", choices=["fetch", "batch", "search", "stats"],
                        help="命令: fetch(单个抓取), batch(批量抓取), search(搜索), stats(统计)")
     
@@ -412,8 +412,8 @@ def main():
     
     args = parser.parse_args()
     
-    # 初始化ABNS
-    abns = ABNS(args.config)
+    # 初始化
+    ains = (args.config)
     
     try:
         if args.command == "fetch":
@@ -421,11 +421,11 @@ def main():
                 print("错误: fetch命令需要--url参数")
                 sys.exit(1)
             
-            result = abns.aggressive_fetch(args.url, args.title)
+            result = ains.aggressive_fetch(args.url, args.title)
             
             # 输出结果
             print("\n" + "="*60)
-            print("ABNS抓取结果")
+            print("抓取结果")
             print("="*60)
             print(f"URL: {result['original_url']}")
             print(f"状态: {'✅ 成功' if result['success'] else '❌ 失败'}")
@@ -440,7 +440,7 @@ def main():
             print("-"*40)
             
             # 保存结果
-            abns.save_results([result], args.output_dir)
+            ains.save_results([result], args.output_dir)
         
         elif args.command == "batch":
             if not args.input or not

@@ -4,7 +4,7 @@
 
 set -e
 
-echo "🚀 开始安装ABNS (All-In-News Skill)"
+echo "🚀 开始安装 (All-In-News Skill)"
 echo "======================================"
 
 # 检查Python版本
@@ -44,7 +44,7 @@ if [ -f "requirements.txt" ]; then
 else
     # 创建基础requirements.txt
     cat > requirements.txt << EOF
-# ABNS基础依赖
+# 基础依赖
 PyYAML>=6.0
 requests>=2.28.0
 beautifulsoup4>=4.11.0
@@ -59,7 +59,7 @@ fi
 echo "创建默认配置..."
 if [ ! -f "$INSTALL_DIR/config/strategies.yaml" ]; then
     cat > "$INSTALL_DIR/config/strategies.yaml" << EOF
-# ABNS策略配置
+# 策略配置
 
 strategies:
   direct_fetch:
@@ -92,7 +92,7 @@ backup:
 
 logging:
   level: INFO
-  file: "$INSTALL_DIR/logs/abns.log"
+  file: "$INSTALL_DIR/logs/ains.log"
 EOF
     echo "✅ 创建策略配置文件"
 fi
@@ -143,15 +143,15 @@ fi
 
 # 设置执行权限
 echo "设置执行权限..."
-chmod +x "$INSTALL_DIR/abns.py"
+chmod +x "$INSTALL_DIR/ains.py"
 chmod +x "$INSTALL_DIR/scripts/"*.sh 2>/dev/null || true
 
 # 创建符号链接到OpenClaw技能目录
 echo "创建OpenClaw技能链接..."
 OPENCLAW_SKILLS_DIR="$HOME/.agents/skills"
 if [ -d "$OPENCLAW_SKILLS_DIR" ]; then
-    ln -sfn "$INSTALL_DIR" "$OPENCLAW_SKILLS_DIR/abns"
-    echo "✅ 创建技能链接: $OPENCLAW_SKILLS_DIR/abns"
+    ln -sfn "$INSTALL_DIR" "$OPENCLAW_SKILLS_DIR/ains"
+    echo "✅ 创建技能链接: $OPENCLAW_SKILLS_DIR/ains"
 else
     echo "⚠️ 未找到OpenClaw技能目录，跳过链接创建"
 fi
@@ -179,10 +179,10 @@ else
 fi
 
 # 创建测试脚本
-cat > "$INSTALL_DIR/scripts/test_abns.sh" << 'EOF'
+cat > "$INSTALL_DIR/scripts/test_ains.sh" << 'EOF'
 #!/bin/bash
 
-# ABNS测试脚本
+# 测试脚本
 
 set -e
 
@@ -196,7 +196,7 @@ cd "$INSTALL_DIR"
 echo "测试1: 检查文件结构..."
 required_files=(
     "SKILL.md"
-    "abns.py"
+    "ains.py"
     "strategies/direct_fetch.py"
     "strategies/keyword_search.py"
     "strategies/alternative_finder.py"
@@ -256,9 +256,9 @@ else
     exit 1
 fi
 
-# 测试3: 运行ABNS命令行测试
+# 测试3: 运行命令行测试
 echo -e "\n测试3: 命令行接口测试..."
-if python3 abns.py --help 2>&1 | grep -q "ABNS"; then
+if python3 ains.py --help 2>&1 | grep -q ""; then
     echo "✅ 命令行接口正常"
 else
     echo "❌ 命令行接口异常"
@@ -281,23 +281,23 @@ echo "✅ 测试环境准备完成"
 
 echo -e "\n🎉 ALLIN技能安装测试完成！"
 echo "下一步:"
-echo "1. 运行完整测试: python3 abns.py fetch --url https://apnews.com/hub/middle-east"
+echo "1. 运行完整测试: python3 ains.py fetch --url https://apnews.com/hub/middle-east"
 echo "2. 查看技能文档: cat SKILL.md | head -50"
 echo "3. 配置个性化设置: 编辑 config/strategies.yaml"
 EOF
 
-chmod +x "$INSTALL_DIR/scripts/test_abns.sh"
+chmod +x "$INSTALL_DIR/scripts/test_ains.sh"
 
 # 创建cron job脚本
-cat > "$INSTALL_DIR/scripts/cron_abns.sh" << 'EOF'
+cat > "$INSTALL_DIR/scripts/cron_ains.sh" << 'EOF'
 #!/bin/bash
 
-# ABNS定时抓取脚本
+# 定时抓取脚本
 # 适合添加到cron job
 
 set -e
 
-echo "🕒 ABNS定时抓取开始: $(date)"
+echo "🕒 定时抓取开始: $(date)"
 echo "=============================="
 
 INSTALL_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
@@ -313,7 +313,7 @@ mkdir -p "$OUTPUT_DIR"
 mkdir -p "$INSTALL_DIR/logs/daily"
 
 # 日志文件
-LOG_FILE="$INSTALL_DIR/logs/daily/abns_${DATE_TAG}.log"
+LOG_FILE="$INSTALL_DIR/logs/daily/ains_${DATE_TAG}.log"
 
 # 要抓取的URL列表
 URLS_FILE="$INSTALL_DIR/config/daily_urls.txt"
@@ -331,8 +331,8 @@ fi
 
 echo "开始抓取 $(cat "$URLS_FILE" | wc -l) 个URL..."
 
-# 运行ABNS批量抓取
-python3 abns.py batch \
+# 运行批量抓取
+python3 ains.py batch \
     --input "$URLS_FILE" \
     --output-dir "$OUTPUT_DIR" \
     --parallel 3 \
@@ -350,7 +350,7 @@ echo "总计: $(cat "$URLS_FILE" | wc -l)"
 # 生成摘要报告
 REPORT_FILE="$OUTPUT_DIR/summary_${DATE_TAG}.md"
 {
-    echo "# ABNS每日抓取报告 - $TODAY"
+    echo "# 每日抓取报告 - $TODAY"
     echo ""
     echo "**抓取时间**: $(date)"
     echo "**URL数量**: $(cat "$URLS_FILE" | wc -l)"
@@ -364,25 +364,25 @@ REPORT_FILE="$OUTPUT_DIR/summary_${DATE_TAG}.md"
 } > "$REPORT_FILE"
 
 echo "报告已保存: $REPORT_FILE"
-echo "✅ ABNS定时抓取完成: $(date)"
+echo "✅ 定时抓取完成: $(date)"
 EOF
 
-chmod +x "$INSTALL_DIR/scripts/cron_abns.sh"
+chmod +x "$INSTALL_DIR/scripts/cron_ains.sh"
 
 echo -e "\n🎉 ALLIN技能安装完成！"
 echo "======================================"
 echo "安装目录: $INSTALL_DIR"
 echo "技能文档: $INSTALL_DIR/SKILL.md"
-echo "主程序: $INSTALL_DIR/abns.py"
+echo "主程序: $INSTALL_DIR/ains.py"
 echo ""
 echo "📋 可用命令:"
-echo "  测试安装: $INSTALL_DIR/scripts/test_abns.sh"
-echo "  单个抓取: python3 $INSTALL_DIR/abns.py fetch --url <URL>"
-echo "  批量抓取: python3 $INSTALL_DIR/abns.py batch --input <文件>"
-echo "  搜索新闻: python3 $INSTALL_DIR/abns.py search --query \"关键词\""
+echo "  测试安装: $INSTALL_DIR/scripts/test_ains.sh"
+echo "  单个抓取: python3 $INSTALL_DIR/ains.py fetch --url <URL>"
+echo "  批量抓取: python3 $INSTALL_DIR/ains.py batch --input <文件>"
+echo "  搜索新闻: python3 $INSTALL_DIR/ains.py search --query \"关键词\""
 echo ""
 echo "🔗 技能已链接到:"
-echo "  OpenClaw技能: ~/.agents/skills/abns"
+echo "  OpenClaw技能: ~/.agents/skills/ains"
 echo "  共享工具: ~/.openclaw/shared-tools/all-in-news-skill"
 echo ""
-echo "🚀 开始使用ABNS，永不放弃的新闻抓取！"
+echo "🚀 开始使用，永不放弃的新闻抓取！"

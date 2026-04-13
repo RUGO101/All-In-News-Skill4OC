@@ -1,13 +1,13 @@
 ---
-name: ainews
+name: ains
 description: >
-  A-I-News Skill - 智能新闻抓取技能 for OpenClaw
+  AINS Skill - 智能新闻抓取技能 for OpenClaw
   永不放弃的新闻抓取策略，主站失败就找转载，总能获取内容。
   基于实际测试的实用智能策略，保证100%成功率。
   触发条件：需要抓取新闻、获取网页内容、信息收集等。
 ---
 
-# 🚀 A-I-News Skill for OpenClaw
+# 🚀 AINS Skill for OpenClaw
 
 ## 核心理念
 **永不放弃，总能找到！**
@@ -38,18 +38,18 @@ description: >
 ### 自动模式（推荐）
 ```bash
 # 抓取单个新闻URL
-abns fetch https://apnews.com/hub/middle-east
+ains fetch https://apnews.com/hub/middle-east
 
 # 批量抓取新闻列表
-abns batch news-list.txt
+ains batch news-list.txt
 
 # 搜索关键词获取新闻
-abns search "伊朗 封锁 霍尔木兹海峡"
+ains search "伊朗 封锁 霍尔木兹海峡"
 ```
 
 ### Python API
 ```python
-from abns import AggressiveNewsFetcher
+from ains import AggressiveNewsFetcher
 
 # 初始化
 fetcher = AggressiveNewsFetcher()
@@ -64,10 +64,10 @@ alternatives = fetcher.find_alternatives("伊朗封锁新闻")
 ### OpenClaw Agent集成
 ```javascript
 // 在agent中使用
-const abns = require('all-in-news-skill');
+const ains = require('all-in-news-skill');
 
 async function getNews() {
-  const news = await abns.aggressiveFetch(url);
+  const news = await ains.aggressiveFetch(url);
   return news;
 }
 ```
@@ -77,7 +77,7 @@ async function getNews() {
 ```
 all-in-news-skill/
 ├── SKILL.md              # 技能说明
-├── abns.py              # 主程序
+├── ains.py              # 主程序
 ├── strategies/          # 抓取策略
 │   ├── direct_fetch.py  # 直接抓取
 │   ├── keyword_search.py # 关键词搜索
@@ -95,8 +95,8 @@ all-in-news-skill/
 │   └── strategies.yaml # 策略配置
 └── scripts/           # 实用脚本
     ├── setup.sh       # 安装脚本
-    ├── test_abns.sh   # 测试脚本
-    └── cron_abns.sh   # cron job脚本
+    ├── test_ains.sh   # 测试脚本
+    └── cron_ains.sh   # cron job脚本
 ```
 
 ## 🛠️ 安装
@@ -114,13 +114,13 @@ pip install -r requirements.txt
 python3 scripts/init_db.py
 
 # 测试安装
-python3 scripts/test_abns.py
+python3 scripts/test_ains.py
 ```
 
 ### OpenClaw集成
 ```bash
 # 将技能链接到agent技能目录
-ln -s ~/.openclaw/shared-tools/all-in-news-skill ~/.agents/skills/abns
+ln -s ~/.openclaw/shared-tools/all-in-news-skill ~/.agents/skills/ains
 
 # 更新技能清单
 openclaw skills refresh
@@ -217,8 +217,8 @@ def smart_router(url):
 from web_content_fetcher import fetch_content
 
 def enhanced_fetch(url):
-    # 先用ABNS获取内容
-    content = abns_fetch(url)
+    # 先用获取内容
+    content = ains_fetch(url)
     
     # 如果需要深度提取
     if needs_deep_extraction(content):
@@ -238,7 +238,7 @@ def new_news_crawler():
     # 新方式（激进）
     news = []
     for source in ALL_SOURCES:  # 包括之前失败的
-        content = abns.aggressive_fetch(source.url)
+        content = ains.aggressive_fetch(source.url)
         if content:
             news.append(content)
     
@@ -252,8 +252,8 @@ def new_news_crawler():
 # 之前：新华网直接失败
 # old: fetch("https://www.xinhuanet.com") -> ❌ FAILED
 
-# 现在：ABNS激进抓取
-news = abns.fetch("https://www.xinhuanet.com")
+# 现在：激进抓取
+news = ains.fetch("https://www.xinhuanet.com")
 # -> ✅ 成功（通过转载或备用）
 ```
 
@@ -268,7 +268,7 @@ sources = [
 
 all_news = []
 for source in sources:
-    news = abns.fetch(source.url_for(event))
+    news = ains.fetch(source.url_for(event))
     if news:
         all_news.append({
             "source": source.name,
@@ -282,16 +282,16 @@ for source in sources:
 ### 案例3：自动化cron job
 ```bash
 #!/bin/bash
-# cron_news.sh - 使用ABNS的每日新闻抓取
+# cron_news.sh - 使用的每日新闻抓取
 
-# 使用ABNS抓取今日新闻
+# 使用抓取今日新闻
 python3 ~/.openclaw/shared-tools/all-in-news-skill/scripts/daily_news.py
 
 # 输出到指定位置
 cp /tmp/today-news.md ~/Obsidian/新闻/$(date +%Y-%m-%d).md
 
 # 记录日志
-echo "$(date): ABNS抓取完成" >> ~/logs/news-crawl.log
+echo "$(date): 抓取完成" >> ~/logs/news-crawl.log
 ```
 
 ## 🚀 快速开始
@@ -299,28 +299,28 @@ echo "$(date): ABNS抓取完成" >> ~/logs/news-crawl.log
 ### 1. 最简单使用
 ```bash
 # 抓取一个新闻URL
-python3 abns.py fetch https://apnews.com/hub/middle-east
+python3 ains.py fetch https://apnews.com/hub/middle-east
 
 # 输出结果到文件
-python3 abns.py fetch https://reuters.com --output today-news.md
+python3 ains.py fetch https://reuters.com --output today-news.md
 ```
 
 ### 2. 批量处理
 ```bash
 # 从文件读取URL列表
-python3 abns.py batch urls.txt --output-dir ./news/
+python3 ains.py batch urls.txt --output-dir ./news/
 
 # 并发抓取（更快）
-python3 abns.py batch urls.txt --parallel 5
+python3 ains.py batch urls.txt --parallel 5
 ```
 
 ### 3. 搜索模式
 ```bash
 # 搜索关键词获取新闻
-python3 abns.py search "中东局势 最新消息"
+python3 ains.py search "中东局势 最新消息"
 
 # 限制来源数量
-python3 abns.py search "伊朗" --limit 10
+python3 ains.py search "伊朗" --limit 10
 ```
 
 ## 🔧 配置调优

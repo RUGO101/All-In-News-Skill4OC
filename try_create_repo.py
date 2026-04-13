@@ -16,14 +16,14 @@ password = "OcKef-!Y+WC50rXM8h3"  # 这可能是个人访问令牌
 repo_names = [
     "all-in-news-skill",
     "all-in-news",
-    "abns-news-crawler",
+    "ains-news-crawler",
     "aggressive-news",
     "news-crawler-pro",
     "never-give-up-news",
-    "abns-tool",
+    "ains-tool",
     "news-fetcher-pro",
     "web-content-fetcher-pro",
-    "openclaw-abns"
+    "openclaw-ains"
 ]
 
 def try_create_repo(repo_name):

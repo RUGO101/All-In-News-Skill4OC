@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-ABNS简单测试
+简单测试
 验证技能基本功能
 """
 
@@ -64,7 +64,7 @@ try:
     else:
         print("❌ 查询构建失败")
     
-    print("\n🎉 ABNS基础功能测试完成！")
+    print("\n🎉 基础功能测试完成！")
     print("技能已准备好使用。")
     
 except Exception as e:
