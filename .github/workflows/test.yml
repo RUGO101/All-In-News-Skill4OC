@@ -1,0 +1,67 @@
+name: Test ABNS Skill
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.9'
+    
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+    
+    - name: Run basic tests
+      run: |
+        python test_simple.py
+    
+    - name: Check code structure
+      run: |
+        echo "检查文件结构..."
+        [ -f SKILL.md ] && echo "✅ SKILL.md存在" || echo "❌ SKILL.md缺失"
+        [ -f abns.py ] && echo "✅ abns.py存在" || echo "❌ abns.py缺失"
+        [ -f README.md ] && echo "✅ README.md存在" || echo "❌ README.md缺失"
+        [ -f requirements.txt ] && echo "✅ requirements.txt存在" || echo "❌ requirements.txt缺失"
+        [ -f LICENSE ] && echo "✅ LICENSE存在" || echo "❌ LICENSE缺失"
+        
+        echo "检查策略模块..."
+        [ -f strategies/direct_fetch.py ] && echo "✅ direct_fetch.py存在" || echo "❌ direct_fetch.py缺失"
+        [ -f strategies/keyword_search.py ] && echo "✅ keyword_search.py存在" || echo "❌ keyword_search.py缺失"
+        [ -f strategies/alternative_finder.py ] && echo "✅ alternative_finder.py存在" || echo "❌ alternative_finder.py缺失"
+        
+        echo "检查脚本..."
+        [ -f scripts/setup.sh ] && echo "✅ setup.sh存在" || echo "❌ setup.sh缺失"
+        [ -f scripts/test_abns.sh ] && echo "✅ test_abns.sh存在" || echo "❌ test_abns.sh缺失"
+    
+    - name: Test imports
+      run: |
+        echo "测试Python模块导入..."
+        python -c "
+import sys
+sys.path.insert(0, '.')
+try:
+    from strategies.keyword_search import KeywordSearcher
+    from strategies.alternative_finder import AlternativeFinder
+    print('✅ 模块导入成功')
+except Exception as e:
+    print(f'❌ 模块导入失败: {e}')
+    sys.exit(1)
+        "
+    
+    - name: Test command line interface
+      run: |
+        echo "测试命令行接口..."
+        python abns.py --help 2>&1 | grep -q "ABNS" && echo "✅ 命令行接口正常" || echo "❌ 命令行接口异常"
