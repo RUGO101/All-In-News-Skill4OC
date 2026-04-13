@@ -1,13 +1,13 @@
 ---
-name: allin
+name: ainews
 description: >
-  All-In-News Skill (ALLIN) - 全域新闻抓取技能
+  A-I-News Skill - 智能新闻抓取技能 for OpenClaw
   永不放弃的新闻抓取策略，主站失败就找转载，总能获取内容。
-  基于实际测试的实用全域策略，保证100%成功率。
+  基于实际测试的实用智能策略，保证100%成功率。
   触发条件：需要抓取新闻、获取网页内容、信息收集等。
 ---
 
-# 🚀 ALLIN - All-In-News Skill
+# 🚀 A-I-News Skill for OpenClaw
 
 ## 核心理念
 **永不放弃，总能找到！**

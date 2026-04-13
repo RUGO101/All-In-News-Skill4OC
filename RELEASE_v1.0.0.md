@@ -24,15 +24,15 @@ cd All-In-News-Skill4OC
 ./scripts/setup.sh
 
 # 使用
-python3 allin.py fetch --url https://apnews.com/hub/middle-east
-python3 allin.py search --query "伊朗 封锁 霍尔木兹海峡"
+python3 ainews.py fetch --url https://apnews.com/hub/middle-east
+python3 ainews.py search --query "伊朗 封锁 霍尔木兹海峡"
 ```
 
 ### 📁 文件结构
 ```
 All-In-News-Skill4OC/
 ├── SKILL.md              # 技能说明文档
-├── allin.py             # 主程序
+├── ainews.py             # 主程序
 ├── strategies/          # 抓取策略模块
 ├── config/              # 配置文件
 ├── databases/           # 数据库文件

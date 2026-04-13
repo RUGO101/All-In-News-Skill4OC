@@ -1,6 +1,6 @@
-# 🚀 ALLIN - All-In-News Skill
+# 🚀 A-I-News Skill for OpenClaw
 
-**永不放弃的全域新闻抓取技能**
+**永不放弃的智能新闻抓取技能**
 
 [![GitHub](https://img.shields.io/badge/GitHub-Repository-blue)](https://github.com/RUGO101/all-in-news-skill)
 [![License](https://img.shields.io/badge/License-MIT-green)](LICENSE)
@@ -9,7 +9,7 @@
 
 ## 📖 简介
 
-ALLIN (All-In-News Skill) 是一个基于**全域策略**的新闻抓取技能，核心理念是**永不放弃，总能找到**。从保守的"失败就排除"转变为全域的"失败就寻找"，保证100%成功率。
+A-I-News Skill for OpenClaw 是一个基于**智能策略**的新闻抓取技能，核心理念是**永不放弃，总能找到**。从保守的"失败就排除"转变为智能的"失败就寻找"，保证100%成功率。
 
 ## 🎯 核心特点
 
