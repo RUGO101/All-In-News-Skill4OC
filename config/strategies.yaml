@@ -1,0 +1,34 @@
+# ABNS策略配置
+
+strategies:
+  direct_fetch:
+    timeout: 5
+    max_retries: 2
+    enabled: true
+    
+  keyword_search:
+    max_keywords: 5
+    search_depth: 3
+    enabled: true
+    
+  alternative_finder:
+    max_alternatives: 10
+    enabled: true
+
+tools:
+  web_fetch:
+    enabled: true
+    
+  browser:
+    enabled: true
+    
+  content_fetcher:
+    enabled: true
+
+backup:
+  enabled: true
+  min_content_length: 100
+
+logging:
+  level: INFO
+  file: "/Users/macbookpro/.openclaw/shared-tools/abns-skill/logs/abns.log"

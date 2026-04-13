@@ -1,0 +1,23 @@
+[
+  {
+    "name": "Ground News",
+    "url_pattern": "https://ground.news/search?q={}",
+    "searchable": true,
+    "reliability": 0.8,
+    "category": "news_aggregator"
+  },
+  {
+    "name": "NewsBreak",
+    "url_pattern": "https://www.newsbreak.com/search?q={}",
+    "searchable": true,
+    "reliability": 0.7,
+    "category": "news_aggregator"
+  },
+  {
+    "name": "Middle East Eye",
+    "url_pattern": "https://www.middleeasteye.net/search?q={}",
+    "searchable": true,
+    "reliability": 0.8,
+    "category": "regional_news"
+  }
+]

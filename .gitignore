@@ -1,0 +1,70 @@
+# 日志文件
+logs/
+*.log
+
+# 输出文件
+output/
+*.md（除了README.md和SKILL.md）
+
+# 缓存和临时文件
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# 虚拟环境
+venv/
+env/
+ENV/
+.env
+.venv
+
+# IDE文件
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# 操作系统文件
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# 配置文件（敏感信息）
+config/secrets.yaml
+*.key
+*.pem
+*.crt
+
+# 测试文件
+test_output/
+test_*.py（除了test_simple.py）
+
+# 数据库文件（除了示例）
+databases/*.db
+databases/*.sqlite3
+
+# 个人文件
+personal/
+private/
